@@ -77,5 +77,7 @@ function updatePen() {
         default:
       }
     }
+    document.getElementById("pen").innerHTML = pen;
+    document.getElementById("underpen").innerHTML = 18200 - pen;
   }
 }
