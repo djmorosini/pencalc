@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+  color:white;
+  background-color: black;
+  font-size: 14px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 2px;
+  width: 95%;
+  text-align: center;
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+
+td select {
+  border: none;
+  -webkit-appearance: none;
+  font-size: 14px;
+}
+
+th {
+  color: orangered;
+}
+
+select {
+  color:white;
+  background-color:black;
+  text-align: center;
+}
+
+.standout {
+  color: orangered;
+  font-weight: bold;
+}
+
+#main {
+  width: 95%;
+}

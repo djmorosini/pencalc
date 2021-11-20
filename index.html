@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pen Calculator</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" type="text/css" media="all" href="pencalc.css" />
+  <script src="pencalc.js"></script>
+</head>
+<body>
+  <div id="main">
+  <table>
+    <colgroup>
+      <col span="1" style="width: 49%;">
+      <col span="1" style="width: 28%;">
+      <col span="1" style="width: 23%;">
+    </colgroup>
+    <tr>
+      <th style="text-align: left;">Debuffs</th>
+      <th>Pen</th>
+      <th>Present</th>
+    </tr>
+    <tr>
+      <td>Major Breach</td>
+      <td>5948</td>
+      <td><select id="select1" onchange="updatePen()"><option>Yes</option><option>No</option></select></td>
+    </tr>
+    <tr>
+      <td>Minor Breach</td>
+      <td>2974</td>
+      <td><select id="select2" onchange="updatePen()"><option>Yes</option><option>No</option></select></td>
+    </tr>
+    <tr>
+      <td>Gold Crusher</td>
+      <td>2108</td>
+      <td><select id="select3" onchange="updatePen()"><option>Yes</option><option>No</option></select></td>
+    </tr>
+    <tr>
+      <th style="text-align: left;">Champion Points</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Alloted CP</td>
+      <td>350</td>
+      <td><select id="select4" onchange="updatePen()"><option>20</option><option>No</option></select></td>
+    </tr>
+    <tr>
+      <th style="text-align: left;">Class Passives</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>NIghtblade flank</td>
+      <td>2974</td>
+      <td><select id="select5" onchange="updatePen()"><option>Yes</option><option selected="selected">No</option></select></td>
+    </tr>
+    <tr>
+      <td>Necro Dismember</td>
+      <td>1500</td>
+      <td><select id="select6" onchange="updatePen()"><option>Yes</option><option selected="selected">No</option></select></td>
+    </tr>
+    <tr>
+      <th style="text-align: left;">Group Pen Sets</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Elemental Catalyst</td>
+      <td>15%</td>
+      <td><select id="select7" onchange="updatePen()"><option>Yes</option><option selected="selected">No</option></select></td>
+    </tr>
+    <tr>
+      <td>Major Force</td>
+      <td>20%</td>
+      <td><select id="select8" onchange="updatePen()"><option>Yes</option><option selected="selected">No</option></select></td>
+    </tr>
+    <tr>
+      <td>Minor Brittle</td>
+      <td>10%</td>
+      <td><select id="select9" onchange="updatePen()"><option>Yes</option><option selected="selected">No</option></select></td>
+    </tr>
+    <tr>
+      <th style="text-align: left;">Misc</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Axes (DW passive)</td>
+      <td>6%</td>
+      <td><select id="select10" onchange="updatePen()"><option>Yes</option><option selected="selected">No</option></select></td>
+    </tr>
+    <tr>
+      <td>Battle Axe</td>
+      <td>12%</td>
+      <td><select id="select11" onchange="updatePen()"><option>Yes</option><option selected="selected">No</option></select></td>
+    </tr>
+    <tr>
+      <td>Harpooner's Kilt</td>
+      <td>10%</td>
+      <td><select id="select12" onchange="updatePen()"><option>Yes</option><option selected="selected">No</option></select></td>
+    </tr>
+    <tr>
+      <th style="text-align: left;">Personal Loadout</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Maces</td>
+      <td>1650</td>
+      <td><select id="select13" onchange="updatePen()"><option>Yes</option><option selected="selected">No</option></select></td>
+    </tr>
+    <tr>
+      <td>Maul</td>
+      <td>3300</td>
+      <td><select id="select14" onchange="updatePen()"><option>Yes</option><option selected="selected">No</option></select></td>
+    </tr>
+    <tr>
+      <td>Sharpened 1h</td>
+      <td>1638</td>
+      <td><select id="select15" onchange="updatePen()"><option>Yes</option><option selected="selected">No</option></select></td>
+    </tr>
+    <tr>
+      <td>Sharpened 2h</td>
+      <td>3276</td>
+      <td><select id="select16" onchange="updatePen()"><option>Yes</option><option selected="selected">No</option></select></td>
+    </tr>
+    <tr>
+      <td>Light Armor</td>
+      <td>939</td>
+      <td><select id="select17" onchange="updatePen()"><option>Yes</option><option selected="selected">No</option></select></td>
+    </tr>
+    <tr>
+      <td>Set Pen</td>
+      <td>1487</td>
+      <td><select id="select18" onchange="updatePen()"><option>Yes</option><option selected="selected">No</option></select></td>
+    </tr>
+  </table>
+  <table>
+    <colgroup>
+      <col span="1" style="width: 50%;">
+      <col span="1" style="width: 50%;">
+    </colgroup>
+    <tr>
+      <td class="standout">Pen Cap</td>
+      <td>125%</td>
+    </tr>
+    <tr>
+      <td class="standout">Pen Build</td>
+      <td><label id="pen"></label></td>
+    </tr>
+    <tr>
+      <td class="standout">Overpen</td>
+      <td><label id="overpen"></label></td>
+    </tr>
+  </table>
+</div>
+<script>updatePen()</script>
+</body>
+</html>
