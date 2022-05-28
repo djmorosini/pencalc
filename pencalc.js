@@ -20,7 +20,7 @@ function updatePen() {
         pen += 1500;
         break;
         case 7:
-        pen += 6000;
+        pen += parseInt(document.getElementById("alkosh").value);
         break;
         case 8:
         pen += 3541;
