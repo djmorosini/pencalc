@@ -1,6 +1,8 @@
 function updatePen(callback) {
   var pen = 0;
-  updatePiercing(callback);
+  if(callback) {
+    updatePiercing(callback);
+  }
   for (let i = 1; i < 19; i++) {
     var select = document.getElementById("select" + i).value;
     if(select == "Yes") {
