@@ -1,5 +1,6 @@
 function updatePen(callback) {
   var pen = 0;
+  updatePiercing(callback);
   for (let i = 1; i < 19; i++) {
     var select = document.getElementById("select" + i).value;
     if(select == "Yes") {
@@ -77,7 +78,6 @@ function updatePen(callback) {
         default:
       }
     }
-    updatePiercing(callback);
     document.getElementById("pen").innerHTML = pen;
     document.getElementById("underpen").innerHTML = 18200 - pen;
   }
