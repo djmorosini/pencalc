@@ -90,20 +90,26 @@ function updatePiercing(callback) {
     switch (select) {
       case '20':
         document.getElementById("piercing").value = '700';
+        break;
       case '10':
         document.getElementById("piercing").value = '350';
+        break;
       case '0':
         document.getElementById("piercing").value = '0';
+        break;
     }
   }
   else if(callback == 'piercing') {
     switch (piercing) {
       case '700':
         document.getElementById("select4").value = '20';
+        break;
       case '350':
         document.getElementById("select4").value = '10';
+        break;
       case '0':
         document.getElementById("select4").value = '0';
+        break;
     }
   }
 }
