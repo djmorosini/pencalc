@@ -88,21 +88,21 @@ function updatePiercing(callback) {
   var piercing = document.getElementById("piercing").value;
   if (callback == 'select') {
     switch (select) {
-      case 20:
+      case '20':
         document.getElementById("piercing").value = '700';
-      case 10:
+      case '10':
         document.getElementById("piercing").value = '350';
-      default:
+      case '0':
         document.getElementById("piercing").value = '0';
     }
   }
   else if(callback == 'piercing') {
     switch (piercing) {
-      case 700:
+      case '700':
         document.getElementById("select4").value = '20';
-      case 350:
+      case '350':
         document.getElementById("select4").value = '10';
-      default:
+      case '0':
         document.getElementById("select4").value = '0';
     }
   }
