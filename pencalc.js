@@ -89,21 +89,21 @@ function updatePiercing(callback) {
   if (callback == 'select') {
     switch (select) {
       case 20:
-        document.getElementById("piercing").select.value = '700';
+        document.getElementById("piercing").value = '700';
       case 10:
-        document.getElementById("piercing").select.value = '350';
+        document.getElementById("piercing").value = '350';
       default:
-        document.getElementById("piercing").select.value = '0';
+        document.getElementById("piercing").value = '0';
     }
   }
   else if(callback == 'piercing') {
     switch (piercing) {
       case 700:
-        document.getElementById("select4").select.value = '20';
+        document.getElementById("select4").value = '20';
       case 350:
-        document.getElementById("select4").select.value = '10';
+        document.getElementById("select4").value = '10';
       default:
-        document.getElementById("select4").select.value = '0';
+        document.getElementById("select4").value = '0';
     }
   }
 }
