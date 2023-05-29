@@ -1,4 +1,4 @@
-function updatePen() {
+function updatePen(callback) {
   var pen = 0;
   for (let i = 1; i < 19; i++) {
     var select = document.getElementById("select" + i).value;
@@ -50,7 +50,7 @@ function updatePen() {
     } else {
       switch (i) {
         case 4:
-        pen += 350;
+        pen += parseInt(document.getElementById("piercing").value);
         break;
         case 13:
         pen += 1650;
@@ -77,7 +77,33 @@ function updatePen() {
         default:
       }
     }
+    updatePiercing(callback);
     document.getElementById("pen").innerHTML = pen;
     document.getElementById("underpen").innerHTML = 18200 - pen;
+  }
+}
+
+function updatePiercing(callback) {
+  var select = document.getElementById("select4").value;
+  var piercing = document.getElementById("piercing").value;
+  if (callback == 'select') {
+    switch (select) {
+      case 20:
+        document.getElementById("piercing").select.value = '700';
+      case 10:
+        document.getElementById("piercing").select.value = '350';
+      default:
+        document.getElementById("piercing").select.value = '0';
+    }
+  }
+  else if(callback == 'piercing') {
+    switch (piercing) {
+      case 700:
+        document.getElementById("select4").select.value = '20';
+      case 350:
+        document.getElementById("select4").select.value = '10';
+      default:
+        document.getElementById("select4").select.value = '0';
+    }
   }
 }
